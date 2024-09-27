@@ -1,0 +1,30 @@
+$breakpoint-up: (
+    "medium": "768px",
+    "large": "1024px",
+    "large-plus": "1180px",
+    "x-large": "1440px",
+);
+$breakpoint-down: (
+    "small": "767.89px",
+    "medium": "1023.89px",
+    "x-medium": "1175px",
+    "large": "1439.89px",
+);
+
+@mixin breakpoint-up($size-name) {
+    @media screen and (min-width: map-get($breakpoint-up, $size-name)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size-name) {
+    @media screen and (max-width: map-get($breakpoint-down, $size-name)) {
+        @content;
+    }
+}
+
+@mixin icon-size($px-size){
+    height: $px-size;
+    width: $px-size;
+    background-size: $px-size $px-size;
+}
