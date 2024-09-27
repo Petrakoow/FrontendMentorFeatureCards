@@ -1,0 +1,11 @@
+.quote {
+    text-align: center;
+    font-size: clamp(px-to-rem(17px), 1140px, px-to-rem(28px));
+    line-height: 1.5;
+    &__title {
+        font-weight: 200;
+    }
+    &__description {
+        font-weight: 600;
+    }
+}
