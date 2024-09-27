@@ -1,11 +1,13 @@
 .quote {
     text-align: center;
-    font-size: clamp(px-to-rem(17px), 1140px, px-to-rem(28px));
+    font-size: clamp(px-to-rem(24px), 5vw, px-to-rem(36px));
     line-height: 1.5;
+    color: $very-dark-blue;
     &__title {
         font-weight: 200;
     }
     &__description {
         font-weight: 600;
     }
+    margin-bottom: 20px;
 }

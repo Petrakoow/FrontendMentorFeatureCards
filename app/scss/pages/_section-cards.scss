@@ -1,8 +1,35 @@
 .feature-section {
+    min-width: 375px;
     max-width: calc($max-width-container + 2 * $padding-container);
     .main & {
-        padding: 90px $padding-container 80px;
+        padding: 80px $padding-container 80px;
         margin: 0 auto;
     }
+    &__description {
+        text-align: center;
+        color: $grayish-blue;
+        min-width: 300px;
+        max-width: 45%;
+        margin: 0 auto;
+        line-height: 1.5;
+        margin-bottom: 65px;
+    }
+    &__container,
+    &__central {
+        display: flex;
+        @include breakpoint-down(x-medium) {
+            flex-direction: column;
+        }
+        @include breakpoint-up(large-plus) {
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        gap: 30px;
+    }
+    &__container {
+        justify-content: center;
+    }
+    &__central {
+        flex-direction: column;
+    }
 }
-
