@@ -14,9 +14,14 @@
         line-height: 1.5;
         margin-bottom: 65px;
     }
+
     &__container,
     &__central {
         display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    &__container {
         @include breakpoint-down(x-medium) {
             flex-direction: column;
         }
@@ -25,9 +30,6 @@
             flex-direction: row;
         }
         gap: 30px;
-    }
-    &__container {
-        justify-content: center;
     }
     &__central {
         flex-direction: column;
