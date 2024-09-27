@@ -2,7 +2,9 @@
     font-size: px-to-rem(11px);
     text-align: center;
     padding: 10px;
+    font-weight: 600;
+    color: $grayish-blue;
     a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(234, 12%, 34%);
     }
 }
