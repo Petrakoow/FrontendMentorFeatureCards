@@ -1,5 +1,4 @@
 .feature-section {
-    min-width: 375px;
     max-width: calc($max-width-container + 2 * $padding-container);
     .main & {
         padding: 80px $padding-container 80px;

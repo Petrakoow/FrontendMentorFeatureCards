@@ -143,6 +143,7 @@ html {
 }
 
 body {
+  min-width: 375px;
   background-color: hsl(0, 0%, 98%);
 }
 
@@ -275,7 +276,6 @@ body {
 }
 
 .feature-section {
-  min-width: 375px;
   max-width: 1204px;
 }
 .main .feature-section {
