@@ -15,23 +15,43 @@
         margin-bottom: 65px;
     }
 
-    &__container,
-    &__central {
-        display: flex;
-        gap: 30px;
-        justify-content: center;
-    }
     &__container {
-        @include breakpoint-down(x-medium) {
-            flex-direction: column;
-        }
-        @include breakpoint-up(large-plus) {
-            flex-wrap: wrap;
-            flex-direction: row;
+        display: grid;
+        justify-content: center;
+        grid-template-rows: repeat(4, auto);
+        .card {
+            align-self: stretch;
         }
         gap: 30px;
-    }
-    &__central {
-        flex-direction: column;
+
+        @include breakpoint-down(ex-small) {
+            grid-template-columns: 1fr;
+        }
+
+        @include breakpoint-up(small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+            .card {
+                &:nth-child(1) {
+                    grid-row: 2 / span 2;
+                    grid-column: 1;
+                }
+                &:nth-child(2) {
+                    grid-row: 1 / span 2;
+                    grid-column: 2;
+                }
+                &:nth-child(3) {
+                    grid-row: 3 / span 2;
+                    grid-column: 2;
+                }
+                &:nth-child(4) {
+                    grid-row: 2 / span 2;
+                    grid-column: 3;
+                }
+            }
+        }
     }
 }
