@@ -1,14 +1,14 @@
 $breakpoint-up: (
+    "small" : "500px",
     "medium": "768px",
     "large": "1024px",
-    "large-plus": "1180px",
     "x-large": "1440px",
 );
 $breakpoint-down: (
-    "small": "767.89px",
-    "medium": "1023.89px",
-    "x-medium": "1175px",
-    "large": "1439.89px",
+    "ex-small" : "499.98px",
+    "small": "767.98px",
+    "medium": "1023.98px",
+    "large": "1439.98px",
 );
 
 @mixin breakpoint-up($size-name) {
@@ -23,7 +23,7 @@ $breakpoint-down: (
     }
 }
 
-@mixin icon-size($px-size){
+@mixin icon-size($px-size) {
     height: $px-size;
     width: $px-size;
     background-size: $px-size $px-size;
